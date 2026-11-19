@@ -39,6 +39,9 @@
       return jsPsych.data.get().last(1).values()[0].response[key];
     }
 
+    // DataPipe experiment ID (https://pipe.jspsych.org), saves to Zenodo
+    var DATAPIPE_EXPERIMENT_ID = "vodfgVStR6XZ";
+
     /* initialize jsPsych */
     var jsPsych = initJsPsych({
       show_progress_bar: true,
@@ -51,7 +54,7 @@
             Accept: "*/*",
           },
           body: JSON.stringify({
-            experimentID: "leNJydZ4J1nh",
+            experimentID: DATAPIPE_EXPERIMENT_ID,
             filename: `${subject_id}.json`,
             data: JSON.stringify(jsPsych.data.get()),
           }),
